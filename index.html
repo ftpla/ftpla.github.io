@@ -1,20 +1,31 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FANTUN | 饭团工作室 | xxxhz1024&potato&cube&kid </title>
+    <title>网站导航</title>
     <style>
+		html{height:100%;}
         body {
+			height: 100%;
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+            background: linear-gradient(135deg, #fbf8ff, #f4f8fa);
             margin: 0;
             padding: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
+		#bg{
+			width: 100%;height: 100%;
+			background-image: url(img/bg.jpg);
+			background-size: cover;
+			position: fixed;
+			z-index: -1;
+			filter: blur(20px) opacity(50%);
+		}
         nav {
-            background-color: rgba(255, 255, 255, 0.5); /* 半透明白色背景 */
+            background-color: rgba(255, 252, 247, 0.5); /* 半透明白色背景 */
             padding: 15px;
             position: sticky;
             top: 0;
@@ -30,6 +41,7 @@
         nav ul li {
             display: inline-block; /* 让链接横向排列 */
             margin-right: 10px; /* 给链接之间一些间距 */
+			font-size: 20px;
         }
         
         nav ul li a {
@@ -60,10 +72,11 @@
             flex-grow: 1;
         }
         .box {
+			display: block;
             width: 250px;
             height: 150px;
             margin: 10px;
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -71,18 +84,18 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+			text-decoration: none;
+			font-size: 18px;
+			color: #333;
+			font-size: 22px;
         }
         .box:hover {
+			background: rgba(255, 255, 255, 0.4);
             transform: translateY(-5px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        .box a {
-            color: #333;
-            text-decoration: none;
-            font-size: 18px;
-        }
         footer {
-            background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
+            background-color: rgba(255, 252, 248, 0.5); /* 半透明白色背景 */
             color: #333;
             text-align: center;
             padding: 10px 0;
@@ -107,8 +120,10 @@
     </style>
 </head>
 <body>
+	<div id="bg"></div>
     <nav>
         <ul>
+			<li style="font-weight: 700;font-size: 28px;position: relative;top:2px"><a href="/">FANTUN</a></li>
             <li><a href="/">首页</a></li>
             <li><a href="about.html">关于我们</a></li>
             <li><a href="services.html">服务</a></li>
@@ -118,9 +133,9 @@
     </nav>
 	<h1>FANTUN</h1>
     <div class="box-container">
-        <div class="box"><a href="https://game.102408.xyz">饭团游戏</a></div>
-        <div class="box"><a href="https://v.102408.xyz">饭团视频</a></div>
-        <div class="box"><a href="https://blog.102408.xyz">饭团博客</a></div>
+        <a class="box" href="https://game.102408.xyz"><div>饭团游戏</div></a>
+        <a class="box" href="https://video.102408.xyz"><div>饭团视频</div></a>
+        <a class="box" href="https://blog.102408.xyz"><div>饭团博客</div></a>
     </div>
     
     <footer>
@@ -131,7 +146,7 @@
             <a href="xxx">联系我们</a>
             <a href="xxx">帮助中心</a>
         </div>
-        <p>© 2023 你的网站名称. 保留所有权利</p>
+        <p>© 2023 FANTUN 保留所有权利</p>
     </footer>
 </body>
 </html>
